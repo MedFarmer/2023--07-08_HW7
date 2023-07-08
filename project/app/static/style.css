@@ -1,0 +1,37 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+th, td {
+    border: 1px solid black;
+    /* width: auto; */
+    max-width: 500px;
+    padding: 10px;
+}
+
+input, button {
+    width: 200px;
+    height: 30px;
+}
+body {
+    margin: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+a {
+    font-size: 20px;            
+}
+
+input, button {
+    width: 200px;
+    height: 30px;
+}
+
+body {
+    margin: 50px;
+}

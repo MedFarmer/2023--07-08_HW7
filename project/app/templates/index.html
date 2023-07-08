@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ BASEDIR }} /static/style.css">
+    <title>index</title>
+</head>
+<body>
+    <h1> Astana Top Hotels </h1> <br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>When opened</th>
+            <th>Full info</th>
+            <th>Update info</th>        
+        </tr>
+        {% for hotel in hotels %}
+        <tr>
+            <td>{{ hotel.id }}</td>
+            <td>{{ hotel.name }}</td>
+            <td>{{ hotel.description }}</td>
+            <td>{{ hotel.date_openning }}</td>
+            <td><a href="{% url 'full_info' hotel.name %}"> Full info </a></td>
+            <td><a href="{% url 'update_hotel' hotel.id %}"> Update </a></td>
+        </tr>
+        {% endfor %}
+    </table> <br>
+    <a href="{% url 'add_hotel' %}"> Add hotel </a> 
+</body>
+</html>

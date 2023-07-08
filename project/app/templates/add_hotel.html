@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ BASEDIR }} /static/style.css">    
+    <title>Add hotel</title>
+</head>
+<body>
+    <h1> Adding new hotel </h1> <br>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="description" placeholder="Description">
+        <input type="date" name="date_openning" placeholder="Date of openning">
+        <button type="submit">Submit</button>
+    </form><br>
+    <a href="{% url 'index' %}"> back to hotels list </a> 
+    
+</body>
+</html>
